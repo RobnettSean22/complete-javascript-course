@@ -365,12 +365,70 @@ function calculateAge(birthYear){
     // }
     
      //  function expression same as the structure above
+     /// function expressions all ways return a value
      var whatDoYouDO = function(job, firstName){
+         switch(job){
+             case 'teacher':
+                 return firstName + ' teaches kids how to code';
+             case 'driver':
+                return firstName + ' drives uber in New York';
+             case 'desginer':
+                return firstName + 'desgines beautiful websites';
+             default:
+                 return firstName + ' does some other job';
+         }
+    }
 
-     }
-    
+    console.log(whatDoYouDO('teacher', 'John'))
+    console.log(whatDoYouDO('designer', 'Jane'))
+    console.log(whatDoYouDO('driver', 'Mike'))
 
+/**********************************************
+ * Arrays
+ * like collections of varibles
+ */
+// initailize new array
+ var names = ['John','Mark', 'Jane'];
 
+ var  years = new Array(1990, 1949, 1998); // normally will not use this method
+
+ console.log(names)
+console.log(names.length)
+
+// mutate new array data
+names[1] = 'Ben';
+names[names.length] = 'Marry';
+console.log(names)
+
+//different data types
+
+var john = ['John', 'Smith', 1990, 'designer', false]
+
+john.push('blue')
+john.unshift('Mr.')
+john.pop()
+john.shift()
+console.log(john)
+//if the value is note in the array it will return -1
+console.log(john.indexOf('taco'))
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner)
+
+/****************************************************
+ * Coding challenge
+ */
+
+ /**
+  * John and his family went on a holliday and went to 3 differnt resturants. The bills wre $124, $48, $268.
+  * 
+  * To tip the waiter a fair amount,john created a simple tip calculator (as a function). he likes to tip 20% of the bill when the bill is less than $50,
+  * 15% when tge bill is between $50 and $200, and 10% if the bill is more than $200.
+  * 
+  * In the end, John would like to have 2 arrays:
+  * 1. containing all three tips (one for each bill)
+  * 2. contatining all three final paid amounts(bill + tip)
+  */
 
   
 
