@@ -150,8 +150,10 @@
 
 //   console.log( `Mark's BMI is ` + marksBmi + ` and John's is ` + johnsBmi +  ` Is Marsk BMI hgigher than Johns? ` + marksBmiMore)
 
+
+
 /**************************************************
- * if/else statments
+ * if/else statments (a way to right conditional coed) way 1!
  */
 
  var firstName = 'John';
@@ -177,18 +179,153 @@
   * && (and), || (or), ! (not)
   */
  
+//  var firstName, age;
+//  firstName = 'John';
+//  age = 16;
+
+//  if(age < 13){
+//     console.log('He is a boy!')
+//  }else if(age >= 13 && age < 20){
+//     console.log('He is a teenager!')
+//  }else if(age >= 20 && age < 30){
+//     console.log('He is a young man!')
+//  }else{
+//     console.log('He is a man!')
+//  }
+
+ /***************************************************
+  * ternary operator and switch statments (a way to right conditional coed) way 2!
+  */
+     
  var firstName, age;
  firstName = 'John';
  age = 16;
 
- if(age < 13){
-    console.log('He is a boy!')
- }else if(age >= 13 && age < 20){
-    console.log('He is a teenager!')
+//  ternary operator
+ age >= 18 ? console.log(firstName + ' drinks beer.')
+: console.log(firstName + ' drinks juice.')
+
+var drink = age >= 18 ? 'beer' : 'juice'
+console.log(drink)  //same as structure below
+
+// if(age >= 18){
+//     drink = 'beer';
+// }else{
+//     dirnk = 'juice' 
+// }
+
+// switch statment - used with string you want to compare (a way to right conditional coed) way 3!
+
+var job = 'cop'
+switch(job){
+    case 'teacher':
+    case 'intructore':
+        console.log(firstName + ' teaches kids how to code');
+        break;
+    case 'driver':
+        console.log(firstName + ' drives an uber in New York');
+        break;
+    case 'designer':
+        console.log(firstName + ' makes beautiful websites.');
+        break;
+        default:
+        console.log(firstName + 'does somtthing else');
+}
+
+
+
+
+var firstName, age;
+firstName = 'John';
+age = 31;
+
+switch(true){
+    case age < 13:
+        console.log('He is a boy')
+        break;
+    case age >= 13 && age < 20:
+        console.log('He is a teenager')
+        break;
+    case age >= 20 && age < 30:
+        console.log('He is a young man')
+        break;
+        default:
+        console.log('He is a man')
+}
+
+// var firstName, age;
+// firstName = 'John';
+// age = 16;
+
+// if(age < 13){
+//    console.log('He is a boy!')
+// }else if(age >= 13 && age < 20){
+//    console.log('He is a teenager!')
+// }else if(age >= 20 && age < 30){
+//    console.log('He is a young man!')
+// }else{
+//    console.log('He is a man!')
+// }
+
+/***************************************************
+ * truthy falsey values
+ * undefined, null, 0, '' = falsey values
+ * not falsey values = truthy values
+ */
+
+ 
+ var height;
+ height = 23;
+
+//  good way to check if any varible is defined 
+ if(height || height === 0){
+     console.log('varible is defined')    
  }else{
-    console.log('He is a man!')
+    console.log('Varible has not been defined')
  }
+
+ //equality operators
+ //== (non strict equality operator) does coercion
+
+ if(height == '23'){
+     console.log('The == operater does type coercion')
+ }
+
+ /*************************************************
+  * Coding Challenge 2
+  */
+
+/**
+ * John and Mike both play basketball on differnt teams. In the lastest 3 games, John's team scored 89, 120 and 103 points, 
+   while Mike's team scored 116, 94, and 123 points.
+  
+ * 1.Calculate the averge scoe for each team 
+ * 2. Decide which teams wins based on average (Highest aveage wins) Print the winner to the console.
+ * 3. Then change the scores to show a different winners. dont forget to take into acct there might be a draw (the same average)
+ * Extra: Mary aslo plays basketball, and her team scored 97, 134, and 105 points. Like before, loig the average winner to the console. Hint: you will need the
+ * && operator to make the decision.
+ */
+ 
+ var johnTeamAverage, mikeTeamAverage, 
+ johnTeamAverage = (94 + 100 + 116) / 3;
+ mikeTeamAverage = (116 + 94 + 132) / 3;
+ maryTeamAverage = (116 + 133 + 94) / 3;
+
+ if(johnTeamAverage > mikeTeamAverage && johnTeamAverage > maryTeamAverage){
+    console.log('John wins!')
+
+ }else if(mikeTeamAverage > johnTeamAverage &&  mikeTeamAverage > maryTeamAverage){
+    console.log('Mike wins!')
+
+ }else if(maryTeamAverage > johnTeamAverage && maryTeamAverage > mikeTeamAverage){
+     console.log('Mary wins!')
+
+ }else{
+     console.log('tie')
+ }
+
      
+
  
 
 
